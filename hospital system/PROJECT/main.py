@@ -1,3 +1,4 @@
+import streamlit as st
 from flask import Flask,render_template,request,session,redirect,url_for,flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin
@@ -41,7 +42,6 @@ def load_user(user_id):
 # app.config['SQLALCHEMY_DATABASE_URL']='mysql://username:password@localhost/databas_table_name'
 app.config['SQLALCHEMY_DATABASE_URI']='mysql://root:@localhost/hms'
 db=SQLAlchemy(app)
-
 
 
 # here we will create db models that is tables
